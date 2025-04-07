@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="mapper.employee">
+    <select id="selectEmployeeById" parameterType="String" resultType="employee">
+        <![CDATA[ select * from employee where emp_no=#{emp_no} ]]>
+    </select>
+
+    <insert id="insertEmployee" parameterType="employee"><![CDATA[
+        insert into employee (emp_no, pw, emp_nm) values (emp_no,pw,emp_nm)
+    ]]></insert>
+</mapper>
